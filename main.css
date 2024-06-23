@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF5E3;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 1px solid #422A1A;
+}
+
+header h1 {
+    font-weight: lighter;
+}
+
+header img {
+    width: 100%;;
+}
+
+.submenu {
+    display: none;
+    border: 1px solid black;
+    background-color: #ccc;
+    position: absolute;
+    left: 0;
+    width: 300px;
+    top: 100%;
+}
+
+.menu > li {
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+    font-size: 1.5em;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li:hover {
+    border-color: #422A1A;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.sobre-a-loja {
+    font-size: 1.5em;
+    margin-top: 56px;
+    margin-bottom: 16px;
+}
+
+#carousel-imagens {
+    justify-content: center;
+    margin-bottom: 56px;
+
+}
+
+.produtos-destaque {
+    font-size: 1.5em;
+}
+
+.destaque {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+}
+
+article {
+    font-size: 1em;
+    margin-top: 16px;
+}
+
+article img {
+    width: 100%;
+}
+
+p {
+    font-size: .85em;
+    margin-top: 8px;
+}
+article button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #422A1A;
+    color: #FFF5E3;
+    border: none;
+    margin: 16px 0;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .produtos-destaque {
+        font-size: 1.5em;
+    }
+
+    .destaque {
+        display: block;
+    }
+
+    .submenu {
+        display: block;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu > li {
+        clear: both;
+    }
+
+    .submenu li {
+        display: block;
+        padding: 8px;
+    }
+
+    .menu-hamburguer {
+        width: 32px;
+        cursor: pointer;
+    }
+    
+    .menu-hamburguer span {
+        height: 2px;
+        width: 100%;
+        background-color:#422A1A;
+        display: block;
+        margin: 6px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .botao-menu{
+        display: none;
+    }
+
+    .produtos-destaque {
+        font-size: 1.5em;
+    }
+
+    .destaque {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .botao-menu{
+        display: none;
+    }
+}
